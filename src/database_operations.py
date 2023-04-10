@@ -3,19 +3,15 @@ import pandas as pd
 import numpy as np
 import psycopg2
 
-from data_preparation import PrepareData
-
+from src.data_preparation import PrepareData
+from src.utils import db_params, logging, CustomException
 from datetime import datetime
-from utils import db_params
-from utils import logging
-from utils import CustomException
 
-# Instantiate PrepareData class
-prepare_data = PrepareData() 
+
 
 class DBOperations:
 
-    def __init__(self, **db_params):
+    def __init__(self, db_params):
         try:
             self.conn = psycopg2.connect(
                 host = db_params['hostname'], 
@@ -28,7 +24,7 @@ class DBOperations:
             logging.info('Postgres Database connection and cursor objects initialized')
         except Exception as e:
             raise CustomException(e, sys)
-
+        
 
     def create_weather_data_table(self):
         
@@ -44,7 +40,6 @@ class DBOperations:
                             '''
             self.cursor.execute(create_table)
             self.conn.commit()
-            self.conn.close()
             logging.info("Table created: weather_data")
         except Exception as e:
             raise CustomException(e, sys)
@@ -60,8 +55,8 @@ class DBOperations:
                         '''
             self.cursor.execute(create_table)
             self.conn.commit()
-            self.conn.close()
             logging.info('Table created: crop_yield_data')
+            print(self.conn)
         except Exception as e:
             raise CustomException(e, sys)
         
@@ -79,23 +74,36 @@ class DBOperations:
                             '''
             self.cursor.execute(create_table)
             self.conn.commit()
-            self.conn.close()
             logging.info("Table created: weather_data_transformed")
+        except Exception as e:
+            raise CustomException(e, sys)
+        
+    
+    def fetch_data_table(self, table_name):
+
+        try:
+            fetch_query = f'''
+                        SELECT * FROM {table_name};
+                        '''
+            results = self.cursor.execute(fetch_query).fetchall()
+            logging.info(f"Fetch finished: {len(results)} records from {table_name}")
+
+            return results
         except Exception as e:
             raise CustomException(e, sys)
 
 
-    def insert_data_into_db(self, table_name):
+    def insert_data_into_table(self, class_instance, table_name):
         
         try:
             count = 0
             start_time = datetime.now()
             
             if table_name == 'weather_data':
-                df = prepare_data.prepare_weather_data()
+                df = class_instance.prepare_weather_data()
                 df.date = df.date.astype(str)
             elif table_name == 'crop_yield_data':
-                df = prepare_data.prepare_crop_data()
+                df = class_instance.prepare_crop_data()
             elif table_name == 'weather_data_transformed':
                 try:
                     start_time = datetime.now()
@@ -111,7 +119,6 @@ class DBOperations:
                                 records were transformed.")
                 except Exception as e:
                     raise CustomException(e, sys)
-
 
             # Convert columns to the best possible dtypes using dtypes supporting pd.NA
             df = df.convert_dtypes()
@@ -136,7 +143,6 @@ class DBOperations:
 
             # Commit changes to the database
             self.conn.commit()
-            self.cursor.close()
             end_time = datetime.now()
             logging.info(f"Ingestion process started at {start_time} and finished at {end_time}, and a total number of {count} records were ingested.")
         except Exception as e:

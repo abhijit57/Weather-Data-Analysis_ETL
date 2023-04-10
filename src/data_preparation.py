@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 
 from datetime import datetime
-from utils import logging
-from utils import CustomException
+from src.utils import logging, CustomException
+
 
 class PrepareData:
 
