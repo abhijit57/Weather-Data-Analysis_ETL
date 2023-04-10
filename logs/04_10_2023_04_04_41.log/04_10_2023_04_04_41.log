@@ -1,0 +1,4 @@
+[ 2023-04-10 04:04:41,474 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-04-10 04:04:41,483 ] 224 werkzeug - INFO -  * Debugger PIN: 690-157-994
+[ 2023-04-10 04:05:09,238 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 04:05:09] "[35m[1mPOST /api/weather HTTP/1.1[0m" 500 -
+[ 2023-04-10 04:07:05,829 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 04:07:05] "[35m[1mPOST /api/weather HTTP/1.1[0m" 500 -

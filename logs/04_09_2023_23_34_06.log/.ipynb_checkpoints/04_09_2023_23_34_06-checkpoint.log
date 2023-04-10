@@ -1,0 +1,20 @@
+[ 2023-04-09 23:34:06,879 ] 21 root - INFO - Logging has started
+[ 2023-04-09 23:43:42,427 ] 35 root - INFO - Program started at 2023-04-09 23:43:42.427159 and ended at 2023-04-09 23:43:42.427669 with number of records ingested: 10000
+[ 2023-04-10 00:05:19,269 ] 8 root - INFO - weather data and crop data path variables created
+[ 2023-04-10 00:05:22,155 ] 26 root - INFO - weather dataframe created and ready for ingestion into Postgre Table
+[ 2023-04-10 00:05:22,214 ] 38 root - INFO - crop dataframe created and ready for ingestion into Postgre Table
+[ 2023-04-10 00:07:05,487 ] 14 root - INFO - Postgre Database connection and cursor objects initialized
+[ 2023-04-10 00:07:05,494 ] 34 root - INFO - Table created: weather_data
+[ 2023-04-10 00:07:05,526 ] 14 root - INFO - Postgre Database connection and cursor objects initialized
+[ 2023-04-10 00:07:05,529 ] 52 root - INFO - Table created: crop_yield_data
+[ 2023-04-10 00:08:23,357 ] 14 root - INFO - Postgre Database connection and cursor objects initialized
+[ 2023-04-10 00:08:23,363 ] 36 root - INFO - Table created: weather_data
+[ 2023-04-10 00:08:23,389 ] 14 root - INFO - Postgre Database connection and cursor objects initialized
+[ 2023-04-10 00:08:23,393 ] 54 root - INFO - Table created: crop_yield_data
+[ 2023-04-10 00:09:57,153 ] 35 root - INFO - Program started at 2023-04-10 00:09:57.152346 and ended at 2023-04-10 00:09:57.153388 with number of records ingested: 10000
+[ 2023-04-10 00:10:24,713 ] 8 root - INFO - weather data and crop data path variables created
+[ 2023-04-10 00:10:27,849 ] 26 root - INFO - weather dataframe created and ready for ingestion into Postgre Table
+[ 2023-04-10 00:10:27,957 ] 38 root - INFO - crop dataframe created and ready for ingestion into Postgre Table
+[ 2023-04-10 00:12:05,417 ] 8 root - INFO - weather data and crop data path variables created
+[ 2023-04-10 00:12:08,306 ] 26 root - INFO - weather dataframe created and ready for ingestion into Postgre Table
+[ 2023-04-10 00:12:08,411 ] 38 root - INFO - crop dataframe created and ready for ingestion into Postgre Table

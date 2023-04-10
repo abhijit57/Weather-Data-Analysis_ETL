@@ -1,0 +1,16 @@
+[ 2023-04-10 04:22:17,086 ] 224 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.242:5000
+[ 2023-04-10 04:22:17,086 ] 224 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-04-10 04:22:17,088 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 04:22:17,794 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-04-10 04:22:17,803 ] 224 werkzeug - INFO -  * Debugger PIN: 690-157-994
+[ 2023-04-10 04:22:40,324 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 04:22:40] "[33mGET / HTTP/1.1[0m" 404 -
+[ 2023-04-10 04:22:40,568 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 04:22:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2023-04-10 04:22:54,881 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 04:22:54] "[31m[1mGET /api/weather HTTP/1.1[0m" 405 -
+[ 2023-04-10 04:23:00,016 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 04:23:00] "[33mGET /api/weather/ HTTP/1.1[0m" 404 -
+[ 2023-04-10 04:23:03,763 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 04:23:03] "[31m[1mGET /api/weather/stats HTTP/1.1[0m" 405 -
+[ 2023-04-10 04:23:08,210 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 04:23:08] "[33mGET /api/weather/ HTTP/1.1[0m" 404 -
+[ 2023-04-10 04:23:19,960 ] 224 werkzeug - INFO -  * Detected change in 'C:\\Users\\abhij\\OneDrive - Indiana University\\Interview Coding Tests\\Corteva_Data Engineering\\code-challenge-template\\main.py', reloading
+[ 2023-04-10 04:23:20,006 ] 224 werkzeug - INFO -  * Restarting with stat

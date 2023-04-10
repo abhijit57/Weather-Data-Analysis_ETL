@@ -1,0 +1,12 @@
+*.py[cod]
+venv/
+.~*
+.idea/
+.vim/
+.vscode/
+.mypy_cache/
+__pycache__/
+config.ini
+wx_data/
+yld_data/
+

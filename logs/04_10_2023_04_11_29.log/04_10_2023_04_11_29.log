@@ -1,0 +1,4 @@
+[ 2023-04-10 04:11:29,390 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-04-10 04:11:29,398 ] 224 werkzeug - INFO -  * Debugger PIN: 690-157-994
+[ 2023-04-10 04:12:01,793 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 04:12:01] "[33mGET / HTTP/1.1[0m" 404 -
+[ 2023-04-10 04:12:13,678 ] 224 werkzeug - INFO -  * Detected change in 'C:\\Users\\abhij\\OneDrive - Indiana University\\Interview Coding Tests\\Corteva_Data Engineering\\code-challenge-template\\main.py', reloading

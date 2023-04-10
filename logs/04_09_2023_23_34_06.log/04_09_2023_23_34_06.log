@@ -1,0 +1,63 @@
+[ 2023-04-09 23:34:06,879 ] 21 root - INFO - Logging has started
+[ 2023-04-09 23:43:42,427 ] 35 root - INFO - Program started at 2023-04-09 23:43:42.427159 and ended at 2023-04-09 23:43:42.427669 with number of records ingested: 10000
+[ 2023-04-10 00:05:19,269 ] 8 root - INFO - weather data and crop data path variables created
+[ 2023-04-10 00:05:22,155 ] 26 root - INFO - weather dataframe created and ready for ingestion into Postgre Table
+[ 2023-04-10 00:05:22,214 ] 38 root - INFO - crop dataframe created and ready for ingestion into Postgre Table
+[ 2023-04-10 00:07:05,487 ] 14 root - INFO - Postgre Database connection and cursor objects initialized
+[ 2023-04-10 00:07:05,494 ] 34 root - INFO - Table created: weather_data
+[ 2023-04-10 00:07:05,526 ] 14 root - INFO - Postgre Database connection and cursor objects initialized
+[ 2023-04-10 00:07:05,529 ] 52 root - INFO - Table created: crop_yield_data
+[ 2023-04-10 00:08:23,357 ] 14 root - INFO - Postgre Database connection and cursor objects initialized
+[ 2023-04-10 00:08:23,363 ] 36 root - INFO - Table created: weather_data
+[ 2023-04-10 00:08:23,389 ] 14 root - INFO - Postgre Database connection and cursor objects initialized
+[ 2023-04-10 00:08:23,393 ] 54 root - INFO - Table created: crop_yield_data
+[ 2023-04-10 00:09:57,153 ] 35 root - INFO - Program started at 2023-04-10 00:09:57.152346 and ended at 2023-04-10 00:09:57.153388 with number of records ingested: 10000
+[ 2023-04-10 00:10:24,713 ] 8 root - INFO - weather data and crop data path variables created
+[ 2023-04-10 00:10:27,849 ] 26 root - INFO - weather dataframe created and ready for ingestion into Postgre Table
+[ 2023-04-10 00:10:27,957 ] 38 root - INFO - crop dataframe created and ready for ingestion into Postgre Table
+[ 2023-04-10 00:12:05,417 ] 8 root - INFO - weather data and crop data path variables created
+[ 2023-04-10 00:12:08,306 ] 26 root - INFO - weather dataframe created and ready for ingestion into Postgre Table
+[ 2023-04-10 00:12:08,411 ] 38 root - INFO - crop dataframe created and ready for ingestion into Postgre Table
+[ 2023-04-10 00:12:37,483 ] 14 root - INFO - Postgre Database connection and cursor objects initialized
+[ 2023-04-10 00:12:37,489 ] 36 root - INFO - Table created: weather_data
+[ 2023-04-10 00:12:37,515 ] 14 root - INFO - Postgre Database connection and cursor objects initialized
+[ 2023-04-10 00:12:37,519 ] 54 root - INFO - Table created: crop_yield_data
+[ 2023-04-10 00:13:19,531 ] 14 root - INFO - Postgre Database connection and cursor objects initialized
+[ 2023-04-10 00:13:19,541 ] 94 root - INFO - Ingestion process started at 2023-04-10 00:13:19.531451 and finished at 2023-04-10 00:13:19.541462, ingesting total number of 30 records.
+[ 2023-04-10 00:13:19,567 ] 14 root - INFO - Postgre Database connection and cursor objects initialized
+[ 2023-04-10 00:18:54,756 ] 94 root - INFO - Ingestion process started at 2023-04-10 00:13:19.568445 and finished at 2023-04-10 00:18:54.756809, ingesting total number of 1729957 records.
+[ 2023-04-10 00:20:48,398 ] 14 root - INFO - Postgre Database connection and cursor objects initialized
+[ 2023-04-10 00:20:48,404 ] 94 root - INFO - Ingestion process started at 2023-04-10 00:20:48.398737 and finished at 2023-04-10 00:20:48.404737, and a total number of 0 records were ingested.
+[ 2023-04-10 00:20:48,434 ] 14 root - INFO - Postgre Database connection and cursor objects initialized
+[ 2023-04-10 00:25:04,659 ] 94 root - INFO - Ingestion process started at 2023-04-10 00:20:48.434737 and finished at 2023-04-10 00:25:04.659118, and a total number of 0 records were ingested.
+[ 2023-04-10 00:32:05,334 ] 14 root - INFO - Postgre Database connection and cursor objects initialized
+[ 2023-04-10 00:52:05,138 ] 8 root - INFO - weather data and crop data path variables created
+[ 2023-04-10 00:52:24,649 ] 8 root - INFO - weather data and crop data path variables created
+[ 2023-04-10 00:52:27,783 ] 29 root - INFO - weather dataframe created and ready for ingestion into Postgre Table
+[ 2023-04-10 00:52:27,849 ] 41 root - INFO - crop dataframe created and ready for ingestion into Postgre Table
+[ 2023-04-10 00:53:24,284 ] 1 root - INFO - 
+[ 2023-04-10 00:53:25,000 ] 1 root - INFO - 
+[ 2023-04-10 00:53:26,480 ] 1 root - INFO - 
+[ 2023-04-10 00:54:06,463 ] 8 root - INFO - weather data and crop data path variables created
+[ 2023-04-10 00:54:09,491 ] 29 root - INFO - weather dataframe created and ready for ingestion into Postgres Table
+[ 2023-04-10 00:54:09,554 ] 41 root - INFO - crop dataframe created and ready for ingestion into Postgres Table
+[ 2023-04-10 00:56:04,516 ] 8 root - INFO - weather data and crop data path variables created
+[ 2023-04-10 00:56:07,722 ] 29 root - INFO - weather dataframe created and ready for ingestion into Postgres Table
+[ 2023-04-10 00:56:07,789 ] 41 root - INFO - crop dataframe created and ready for ingestion into Postgres Table
+[ 2023-04-10 00:57:56,222 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+[ 2023-04-10 00:57:56,231 ] 36 root - INFO - Table created: weather_data
+[ 2023-04-10 00:57:56,257 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+[ 2023-04-10 00:57:56,261 ] 54 root - INFO - Table created: crop_yield_data
+[ 2023-04-10 00:58:02,356 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+[ 2023-04-10 00:58:02,365 ] 94 root - INFO - Ingestion process started at 2023-04-10 00:58:02.356827 and finished at 2023-04-10 00:58:02.365821, and a total number of 30 records were ingested.
+[ 2023-04-10 00:58:02,392 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+[ 2023-04-10 01:04:08,847 ] 94 root - INFO - Ingestion process started at 2023-04-10 00:58:02.393830 and finished at 2023-04-10 01:04:08.847021, and a total number of 1729957 records were ingested.
+[ 2023-04-10 01:07:47,100 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+[ 2023-04-10 01:46:46,004 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+[ 2023-04-10 01:58:32,275 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+[ 2023-04-10 01:59:45,059 ] 75 root - INFO - Table created: weather_data_transformed
+[ 2023-04-10 01:59:59,474 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+[ 2023-04-10 02:00:04,950 ] 15 root - INFO - Data Transformation process started at 2023-04-10 02:00:04.557299 and finished at 2023-04-10 02:00:04.950298, and a total number of 4820                      transformed records were ingested into a new table: weather_data.
+[ 2023-04-10 02:00:24,424 ] 15 root - INFO - Data Transformation process started at 2023-04-10 02:00:24.070853 and finished at 2023-04-10 02:00:24.424752, and a total number of 4820                      transformed records were ingested into a new table: weather_data.
+[ 2023-04-10 02:00:31,215 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+[ 2023-04-10 02:01:00,339 ] 114 root - INFO - Ingestion process started at 2023-04-10 02:00:58.360425 and finished at 2023-04-10 02:01:00.339757, and a total number of 4820 records were ingested.

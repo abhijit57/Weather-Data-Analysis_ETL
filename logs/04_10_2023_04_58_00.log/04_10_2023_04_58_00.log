@@ -1,0 +1,5 @@
+[ 2023-04-10 04:58:00,078 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-04-10 04:58:00,087 ] 224 werkzeug - INFO -  * Debugger PIN: 690-157-994
+[ 2023-04-10 04:58:01,398 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 04:58:01] "POST /api/weather HTTP/1.1" 200 -
+[ 2023-04-10 04:58:06,731 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 04:58:06] "POST /api/weather/stats HTTP/1.1" 200 -
+[ 2023-04-10 04:59:18,781 ] 224 werkzeug - INFO -  * Detected change in 'C:\\Users\\abhij\\OneDrive - Indiana University\\Interview Coding Tests\\Corteva_Data Engineering\\code-challenge-template\\src\\database_operations.py', reloading
