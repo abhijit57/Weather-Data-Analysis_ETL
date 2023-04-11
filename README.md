@@ -50,7 +50,7 @@ Setup the PostGres server as shown in the images below in the pgAdmin 4 tool. Pr
         * **fetch_data_table()** - takes in table name as a parameter and fetches all the data from that table.
         * **insert_data_into_table()** - takes a class_instance as one parameter which would be the instantiated PrepareData class and the other parameter is the table name. It then inserts data from the dataframe created from the PrepareData class and it's methods to the specific table defined as per the table_name parameter. It also has a check to prevent duplicate insertion in the table when the insert query is run again after it has already been ran once.
 
-        In this method itself, there is a transformation operation being undergone on the raw data fetched from weather_data table. Some statistical computations are performed like average min and max temperature in celsius, total precipitation amount in centimeters where missing values {If the min and max temperature have values -999.9, then they are considered missing values. If the precipitation_amt has value as -99.99, then it's considered as missing too.} are ignored during statistical computations. Then these transformed data is inserted into weather_data_transformed  table.
+     In this method itself, there is a transformation operation being undergone on the raw data fetched from weather_data table. Some statistical computations are performed like average min and max temperature in celsius, total precipitation amount in centimeters where missing values {If the min and max temperature have values -999.9, then they are considered missing values. If the precipitation_amt has value as -99.99, then it's considered as missing too.} are ignored during statistical computations. Then these transformed data is inserted into weather_data_transformed  table.
         ![data_insertion output](./answers/Postgres_weather_data_table_records.JPG)
         ![data_insertion output](./answers/Postgres_crop_yield_data_table_records.JPG)
         ![data_insertion output](./answers/Postgres_weather_data_transformed_table_records.JPG)
@@ -109,7 +109,7 @@ Setup the PostGres server as shown in the images below in the pgAdmin 4 tool. Pr
 
 
 # main.py
-    This python module creates flask RESTful API endpoints with GET methods for http://127.0.0.1:5000/api/weather and http://127.0.0.1:5000/api/weather/stats  
+   This python module creates flask RESTful API endpoints with GET methods for http://127.0.0.1:5000/api/weather and http://127.0.0.1:5000/api/weather/stats  
     To run this, use command "python main.py"
     The first api endpoint: /api/weather returns all the records fetched from weather_data table based on the input query - params
       {
@@ -121,17 +121,17 @@ Setup the PostGres server as shown in the images below in the pgAdmin 4 tool. Pr
       }
     ![/api/weather output](./answers/api_weather_jsonOut.JPG)
 
-    The second api endpoint: /api/weather/stats returns all the records fetched from from weather_data table based on the input query - params (shown above) and returns transformed records based on statistical computations -> average max and min temperature and total precipitation amount.
+   The second api endpoint: /api/weather/stats returns all the records fetched from from weather_data table based on the input query - params (shown above) and returns transformed records based on statistical computations -> average max and min temperature and total precipitation amount.
     ![/api/weather/stats output](./answers/api_weather_stats_jsonOut.JPG)
 
 # swagger.json
-    Swagger.json is a file that contains a machine-readable description of the RESTful web API. It is used for documenting, visualizing, and testing the API. The Swagger.json file specifies the API's endpoints, their parameters, and their responses. It can be used by various tools, such as Swagger UI or Postman, to generate documentation and a client SDK for the API. By providing a standardized way of describing APIs, Swagger.json helps developers and users understand how to interact with the API and facilitates the development of API-driven applications.
+   Swagger.json is a file that contains a machine-readable description of the RESTful web API. It is used for documenting, visualizing, and testing the API. The Swagger.json file specifies the API's endpoints, their parameters, and their responses. It can be used by various tools, such as Swagger UI or Postman, to generate documentation and a client SDK for the API. By providing a standardized way of describing APIs, Swagger.json helps developers and users understand how to interact with the API and facilitates the development of API-driven applications.
 
-    Swagger UI configurations and blueprint are defined in the main.py module.
+   Swagger UI configurations and blueprint are defined in the main.py module.
 
 #### Swagger Endpoint -> http://127.0.0.1:5000/swagger/
 
-    Swagger Screenshots:
+   Swagger Screenshots:
     ![Swagger 1](./answers/Swagger1.JPG)
     ![Swagger 2](./answers/Swagger2.JPG)
     ![Swagger 3](./answers/Swagger3.JPG)
