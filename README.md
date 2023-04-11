@@ -23,7 +23,7 @@ Setup the PostGres server as shown in the images below in the pgAdmin 4 tool. Pr
   ![Setting PostGres Server](./answers/PostGres_Server1.JPG)
   ![Setting PostGres Server](./answers/PostGres_Server2.JPG)
 
-    Then create a database in this server by the following way:
+   Then create a database in this server by the following way:
     ![Setting PostGres DB](./answers/PostGresDB.JPG)
     After db is created in the pgadmin 4, create a config.ini file and set it as shown below:
                      [db_params]
