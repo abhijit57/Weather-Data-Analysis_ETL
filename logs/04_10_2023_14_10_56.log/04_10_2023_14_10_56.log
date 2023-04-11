@@ -1,0 +1,17 @@
+[ 2023-04-10 14:10:56,375 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-04-10 14:10:56,383 ] 224 werkzeug - INFO -  * Debugger PIN: 690-157-994
+[ 2023-04-10 14:11:05,072 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:11:05] "GET /swagger/ HTTP/1.1" 200 -
+[ 2023-04-10 14:11:05,149 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:11:05] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:11:05,152 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:11:05] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:11:05,153 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:11:05] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:11:05,153 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:11:05] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:11:05,441 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:11:05] "GET /swagger.json HTTP/1.1" 200 -
+[ 2023-04-10 14:11:17,941 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:11:17] "GET /swagger.json HTTP/1.1" 200 -
+[ 2023-04-10 14:15:48,163 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:15:48] "GET /swagger/ HTTP/1.1" 200 -
+[ 2023-04-10 14:15:48,205 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:15:48] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:15:48,206 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:15:48] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:15:48,207 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:15:48] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:15:48,208 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:15:48] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:15:48,513 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:15:48] "GET /swagger.json HTTP/1.1" 200 -
+[ 2023-04-10 14:15:48,516 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:15:48] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:18:27,154 ] 224 werkzeug - INFO -  * Detected change in 'C:\\Users\\abhij\\OneDrive - Indiana University\\Interview Coding Tests\\Corteva_Data Engineering\\Weather-Data-Analysis_ETL\\main.py', reloading

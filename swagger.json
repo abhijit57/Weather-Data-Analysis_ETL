@@ -1,0 +1,114 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Swagger API for Weather Data - ETL",
+      "description": "API Endpoint (/weather) demonstrate filtering of weather data based on user qery parameters like start date, end date and region (Iowa, Nebraska, Illinois, Ohio). Second API endpoint (/waether/stats) exposes the records (fetched on the basis of user query parameters) {in the first api endpoint (/weather)} after certain statistical computations like average minimum temperature and maximum temperature in celsius; total precipitaion amount in centimeters.",
+      "version": "1.0"
+    },
+    "basePath": "/api",
+    "schemes": [
+      "http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/weather": {
+        "get": {
+          "summary": "Returns records from the weather data table based on user query (start date, end date and station id) parameters.",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in" : "query",
+              "name": "start_date",
+              "description" : "Start Date of recorded weather data",
+              "required" : true
+            },
+            {
+                "in" : "query",
+                "name": "end_date",
+                "description" : "End Date of recorded weather data",
+                "required" : true
+            },
+            {
+                "in" : "query",
+                "name": "station_id",
+                "description" : "Weather data of that particular Region (station id) for a particular timeframe.",
+                "required" : true
+            },
+            {
+                "in" : "query",
+                "name": "page_size",
+                "description" : "Number of records to be displayed in the page.",
+                "required" : true
+            },
+            {
+                "in" : "query",
+                "name": "page_number",
+                "description" : "Page Number containing certain number of records in a page based on user choice.",
+                "required" : true
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response."
+            }
+          }
+        }
+      },
+      "/weather/stats": {
+        "get": {
+          "summary": "Uses the fetched records from weather data table based on the input query string (from api -> /weather) and returns the transformed records with some statistical computations like average min and max temperature as well as total precipitation amount.",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in" : "query",
+              "name": "start_date",
+              "description" : "Start Date of recorded weather data",
+              "required" : true
+            },
+            {
+                "in" : "query",
+                "name": "end_date",
+                "description" : "End Date of recorded weather data",
+                "required" : true
+            },
+            {
+                "in" : "query",
+                "name": "station_id",
+                "description" : "Weather data of that particular Region (station id) for a particular timeframe.",
+                "required" : true
+            },
+            {
+                "in" : "query",
+                "name": "page_size",
+                "description" : "Number of records to be displayed in the page.",
+                "required" : true
+            },
+            {
+                "in" : "query",
+                "name": "page_number",
+                "description" : "Page Number containing certain number of records in a page based on user choice.",
+                "required" : true
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response."
+            }
+          }
+        }
+      }
+
+    }
+}
+  
+
+

@@ -1,0 +1,2 @@
+[ 2023-04-10 16:52:37,611 ] 27 root - INFO - Postgres Database connection and cursor objects initialized
+[ 2023-04-10 16:52:37,619 ] 87 root - INFO - Table created: crop_yield_data

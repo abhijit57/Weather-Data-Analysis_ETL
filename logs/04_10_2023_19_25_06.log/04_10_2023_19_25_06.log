@@ -1,0 +1,4 @@
+[ 2023-04-10 19:25:06,467 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-04-10 19:25:06,475 ] 224 werkzeug - INFO -  * Debugger PIN: 690-157-994
+[ 2023-04-10 19:25:08,616 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:25:08] "[35m[1mGET /api/weather/stats?end_date=1995-04-01&start_date=1994-05-01&station_id=USC0011007201&station_id=USC00110072&page_size=10&page_number=1 HTTP/1.1[0m" 500 -
+[ 2023-04-10 19:25:46,071 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:25:46] "[35m[1mGET /api/weather/stats?end_date=1995-04-01&start_date=1994-05-01&station_id=USC0011007201&page_size=10&page_number=1 HTTP/1.1[0m" 500 -

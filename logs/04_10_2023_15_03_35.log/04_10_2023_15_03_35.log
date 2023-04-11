@@ -1,0 +1,12 @@
+[ 2023-04-10 15:03:35,833 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-04-10 15:03:35,841 ] 224 werkzeug - INFO -  * Debugger PIN: 690-157-994
+[ 2023-04-10 15:03:38,151 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:03:38] "POST /api/weather HTTP/1.1" 200 -
+[ 2023-04-10 15:03:49,764 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:03:49] "GET /swagger/ HTTP/1.1" 200 -
+[ 2023-04-10 15:03:49,808 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:03:49] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 15:03:49,811 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:03:49] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 15:03:49,812 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:03:49] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 15:03:49,813 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:03:49] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 15:03:50,048 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:03:50] "GET /swagger.json HTTP/1.1" 200 -
+[ 2023-04-10 15:03:50,052 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:03:50] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[ 2023-04-10 15:03:57,952 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:03:57] "POST /api/weather HTTP/1.1" 200 -
+[ 2023-04-10 15:04:43,602 ] 224 werkzeug - INFO -  * Detected change in 'C:\\Users\\abhij\\OneDrive - Indiana University\\Interview Coding Tests\\Corteva_Data Engineering\\Weather-Data-Analysis_ETL\\main.py', reloading

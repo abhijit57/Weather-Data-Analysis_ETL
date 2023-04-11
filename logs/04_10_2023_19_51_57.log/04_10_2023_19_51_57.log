@@ -1,0 +1,4 @@
+[ 2023-04-10 19:51:57,400 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-04-10 19:51:57,409 ] 224 werkzeug - INFO -  * Debugger PIN: 690-157-994
+[ 2023-04-10 19:52:00,630 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:52:00] "[35m[1mGET /api/weather?end_date=1998-04-01&start_date=1994-05-01&station_id=USC00110072&page_size=3&page_number=1 HTTP/1.1[0m" 500 -
+[ 2023-04-10 19:52:29,236 ] 224 werkzeug - INFO -  * Detected change in 'C:\\Users\\abhij\\OneDrive - Indiana University\\Interview Coding Tests\\Corteva_Data Engineering\\Weather-Data-Analysis_ETL\\main.py', reloading

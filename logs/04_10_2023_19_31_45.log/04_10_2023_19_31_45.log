@@ -1,0 +1,14 @@
+[ 2023-04-10 19:31:45,399 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-04-10 19:31:45,407 ] 224 werkzeug - INFO -  * Debugger PIN: 690-157-994
+[ 2023-04-10 19:31:50,738 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:31:50] "GET /api/weather/stats?end_date=1998-04-01&start_date=1994-05-01&station_id=USC00110072&page_size=3&page_number=1 HTTP/1.1" 200 -
+[ 2023-04-10 19:32:24,966 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:32:24] "GET /api/weather?end_date=1998-04-01&start_date=1994-05-01&station_id=USC00110072&page_size=10&page_number=1 HTTP/1.1" 200 -
+[ 2023-04-10 19:32:35,244 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:32:35] "GET /api/weather?end_date=1998-04-01&start_date=1994-05-01&station_id=USC00110072&page_size=3&page_number=1 HTTP/1.1" 200 -
+[ 2023-04-10 19:32:59,900 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:32:59] "GET /swagger/ HTTP/1.1" 200 -
+[ 2023-04-10 19:32:59,950 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:32:59] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:32:59,951 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:32:59] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:32:59,956 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:32:59] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:32:59,957 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:32:59] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:33:00,133 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:33:00] "GET /swagger.json HTTP/1.1" 200 -
+[ 2023-04-10 19:33:00,133 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:33:00] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:33:43,373 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:33:43] "GET /api/weather?start_date=1994-05-01&end_date=1995-04-01&station_id=USC00110072&page_size=3&page_number=1 HTTP/1.1" 200 -
+[ 2023-04-10 19:34:16,589 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:34:16] "GET /api/weather/stats?start_date=1994-05-01&end_date=1995-04-01&station_id=USC00110072&page_size=3&page_number=1 HTTP/1.1" 200 -

@@ -1,0 +1,11 @@
+[ 2023-04-10 15:09:07,664 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-04-10 15:09:07,673 ] 224 werkzeug - INFO -  * Debugger PIN: 690-157-994
+[ 2023-04-10 15:09:10,515 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:09:10] "POST /api/weather HTTP/1.1" 200 -
+[ 2023-04-10 15:09:21,582 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:09:21] "GET /swagger/ HTTP/1.1" 200 -
+[ 2023-04-10 15:09:21,633 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:09:21] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 15:09:21,634 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:09:21] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 15:09:21,635 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:09:21] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 15:09:21,637 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:09:21] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 15:09:22,004 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:09:22] "GET /swagger.json HTTP/1.1" 200 -
+[ 2023-04-10 15:09:22,005 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:09:22] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[ 2023-04-10 15:09:31,430 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 15:09:31] "POST /api/weather HTTP/1.1" 200 -

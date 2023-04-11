@@ -1,0 +1,132 @@
+[ 2023-04-10 20:17:54,130 ] 224 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[ 2023-04-10 20:17:54,131 ] 224 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-04-10 20:17:54,132 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:17:54,762 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-04-10 20:17:54,770 ] 224 werkzeug - INFO -  * Debugger PIN: 690-157-994
+[ 2023-04-10 20:18:05,799 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 20:18:05] "GET /swagger/ HTTP/1.1" 200 -
+[ 2023-04-10 20:18:05,825 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 20:18:05] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 20:18:05,826 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 20:18:05] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 20:18:05,828 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 20:18:05] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 20:18:05,829 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 20:18:05] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 20:18:06,175 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 20:18:06] "GET /swagger.json HTTP/1.1" 200 -
+[ 2023-04-10 20:18:06,176 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 20:18:06] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[ 2023-04-10 20:19:15,625 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 20:19:15] "GET /api/weather?start_date=1992-02-01&end_date=2000-01-01&station_id=USC00112140&page_size=5&page_number=3 HTTP/1.1" 200 -
+[ 2023-04-10 20:19:29,365 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 20:19:29] "GET /api/weather?start_date=1992-02-01&end_date=2000-01-01&station_id=USC00112140&page_size=5&page_number=2 HTTP/1.1" 200 -
+[ 2023-04-10 20:19:38,093 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 20:19:38] "GET /api/weather?start_date=1992-02-01&end_date=2000-01-01&station_id=USC00112140&page_size=5&page_number=10 HTTP/1.1" 200 -
+[ 2023-04-10 20:19:45,365 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 20:19:45] "GET /api/weather?start_date=1992-02-01&end_date=2000-01-01&station_id=USC00112140&page_size=5&page_number=20 HTTP/1.1" 200 -
+[ 2023-04-10 20:20:27,975 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 20:20:27] "GET /api/weather/stats?start_date=1992-02-01&end_date=2000-01-01&station_id=USC00112140&page_size=10&page_number=5 HTTP/1.1" 200 -
+[ 2023-04-10 20:20:38,281 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 20:20:38] "GET /api/weather/stats?start_date=1992-02-01&end_date=2000-01-01&station_id=USC00112140&page_size=10&page_number=10 HTTP/1.1" 200 -
+[ 2023-04-10 20:20:46,035 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 20:20:46] "GET /api/weather/stats?start_date=1992-02-01&end_date=2000-01-01&station_id=USC00112140&page_size=10&page_number=100 HTTP/1.1" 200 -
+[ 2023-04-10 20:20:51,369 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 20:20:51] "GET /api/weather/stats?start_date=1992-02-01&end_date=2000-01-01&station_id=USC00112140&page_size=10&page_number=1000 HTTP/1.1" 200 -
+[ 2023-04-10 20:24:56,253 ] 224 werkzeug - INFO -  * Detected change in 'C:\\Users\\abhij\\OneDrive - Indiana University\\Interview Coding Tests\\Corteva_Data Engineering\\Weather-Data-Analysis_ETL\\src\\data_preparation.py', reloading
+[ 2023-04-10 20:24:56,297 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:24:59,749 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:25:03,206 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:25:11,518 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:25:28,287 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:25:32,978 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:25:38,825 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:25:41,092 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:25:44,571 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:25:48,063 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:26:37,592 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:27:00,329 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:27:02,642 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:28:59,219 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:29:39,918 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:29:42,202 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:29:50,521 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:29:55,232 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:29:58,707 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:30:04,623 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:30:12,984 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:30:22,570 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:30:27,237 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:30:31,894 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:30:34,187 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:30:37,690 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:30:43,553 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:30:51,810 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:30:59,024 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:31:01,270 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:31:05,932 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:31:09,386 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:31:27,349 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:31:29,658 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:31:33,156 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:31:34,224 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:31:37,708 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:31:42,378 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:31:44,655 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:32:12,212 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:32:18,238 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:32:21,751 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:32:25,314 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:32:32,396 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:32:34,727 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:32:38,222 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:32:45,291 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:32:53,547 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:33:07,897 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:33:18,630 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:33:23,407 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:33:36,465 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:33:49,564 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:34:06,265 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:34:10,987 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:34:14,485 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:34:25,164 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:34:28,746 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:34:57,494 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:35:04,677 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:35:20,263 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:35:24,969 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:35:29,657 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:35:35,538 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:35:41,412 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:35:58,189 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:35:59,282 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:36:03,955 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:36:24,375 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:36:26,735 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:36:33,945 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:36:45,898 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:36:50,569 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:36:56,540 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:37:00,049 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:37:05,963 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:37:14,358 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:37:17,887 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:37:22,552 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:37:38,037 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:37:40,319 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:37:42,639 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:38:21,096 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:38:25,718 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:38:34,205 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:38:43,798 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:38:53,388 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:38:55,709 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:38:58,012 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:39:12,353 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:39:15,812 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:39:18,100 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:39:28,779 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:39:38,362 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:39:56,343 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:39:57,462 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:40:02,171 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:40:06,801 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:40:12,807 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:40:22,423 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:40:42,698 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:40:47,443 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:40:49,813 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:40:53,253 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:41:17,271 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:41:42,600 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:41:48,510 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:42:51,307 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:42:55,981 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 20:42:59,442 ] 224 werkzeug - INFO -  * Restarting with stat

@@ -1,0 +1,11 @@
+[ 2023-04-10 19:12:50,989 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-04-10 19:12:50,997 ] 224 werkzeug - INFO -  * Debugger PIN: 690-157-994
+[ 2023-04-10 19:12:57,332 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:12:57] "GET /swagger/ HTTP/1.1" 200 -
+[ 2023-04-10 19:12:57,381 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:12:57] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:12:57,382 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:12:57] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:12:57,383 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:12:57] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:12:57,383 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:12:57] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:12:57,605 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:12:57] "GET /swagger.json HTTP/1.1" 200 -
+[ 2023-04-10 19:12:57,607 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:12:57] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:13:20,665 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:13:20] "GET /api/weather?start_date=1994-05-01&end_date=1995-04-01&station_id=USC00110072 HTTP/1.1" 200 -
+[ 2023-04-10 19:13:42,752 ] 224 werkzeug - INFO -  * Detected change in 'C:\\Users\\abhij\\OneDrive - Indiana University\\Interview Coding Tests\\Corteva_Data Engineering\\Weather-Data-Analysis_ETL\\main.py', reloading

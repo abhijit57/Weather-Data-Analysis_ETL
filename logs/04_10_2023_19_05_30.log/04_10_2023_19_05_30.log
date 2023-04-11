@@ -1,0 +1,52 @@
+[ 2023-04-10 19:05:30,320 ] 224 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[ 2023-04-10 19:05:30,320 ] 224 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-04-10 19:05:30,321 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:05:30,988 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-04-10 19:05:30,996 ] 224 werkzeug - INFO -  * Debugger PIN: 690-157-994
+[ 2023-04-10 19:05:35,456 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:05:35] "GET /api/weather?end_date=1995-04-01&start_date=1994-05-01&station_id=USC00110072 HTTP/1.1" 200 -
+[ 2023-04-10 19:06:05,947 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:06:05] "[31m[1mPOST /api/weather/stats?end_date=1995-04-01&start_date=1994-05-01&station_id=USC00110072 HTTP/1.1[0m" 405 -
+[ 2023-04-10 19:06:13,578 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:06:13] "GET /api/weather/stats?end_date=1995-04-01&start_date=1994-05-01&station_id=USC00110072 HTTP/1.1" 200 -
+[ 2023-04-10 19:09:03,629 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:09:03] "GET /swagger/ HTTP/1.1" 200 -
+[ 2023-04-10 19:09:03,658 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:09:03] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:09:03,659 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:09:03] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:09:03,661 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:09:03] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:09:03,661 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:09:03] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:09:04,052 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:09:04] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:09:04,056 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:09:04] "GET /swagger.json HTTP/1.1" 200 -
+[ 2023-04-10 19:09:55,209 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:09:55] "GET /swagger/ HTTP/1.1" 200 -
+[ 2023-04-10 19:09:55,247 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:09:55] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:09:55,249 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:09:55] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:09:55,250 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:09:55] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:09:55,251 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:09:55] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:09:55,455 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:09:55] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:09:55,459 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:09:55] "GET /swagger.json HTTP/1.1" 200 -
+[ 2023-04-10 19:10:33,492 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:10:33] "GET /api/weather?start_date=1994-05-01&end_date=1995-04-01&station_id=USC00110072 HTTP/1.1" 200 -
+[ 2023-04-10 19:11:01,767 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:11:01] "GET /swagger/ HTTP/1.1" 200 -
+[ 2023-04-10 19:11:01,816 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:11:01] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:11:01,819 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:11:01] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:11:01,820 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:11:01] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:11:01,820 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:11:01] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:11:02,142 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:11:02] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[ 2023-04-10 19:11:02,145 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:11:02] "GET /swagger.json HTTP/1.1" 200 -
+[ 2023-04-10 19:11:52,987 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 19:11:52] "GET /api/weather/stats?start_date=1994-05-01&end_date=1995-04-01&station_id=USC00110072 HTTP/1.1" 200 -
+[ 2023-04-10 19:12:28,310 ] 224 werkzeug - INFO -  * Detected change in 'C:\\Users\\abhij\\OneDrive - Indiana University\\Interview Coding Tests\\Corteva_Data Engineering\\Weather-Data-Analysis_ETL\\main.py', reloading
+[ 2023-04-10 19:12:28,363 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:12:30,735 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:12:35,451 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:12:36,482 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:12:39,924 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:12:44,589 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:12:47,999 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:12:50,299 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:13:42,796 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:14:32,930 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:14:50,757 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:14:51,839 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:14:54,092 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:15:48,966 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:15:50,025 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:15:53,561 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:15:55,842 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:16:00,647 ] 224 werkzeug - INFO -  * Restarting with stat
+[ 2023-04-10 19:16:05,349 ] 224 werkzeug - INFO -  * Restarting with stat

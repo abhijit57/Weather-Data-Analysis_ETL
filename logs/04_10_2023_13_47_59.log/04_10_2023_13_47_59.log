@@ -1,0 +1,31 @@
+[ 2023-04-10 13:47:59,645 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-04-10 13:47:59,654 ] 224 werkzeug - INFO -  * Debugger PIN: 690-157-994
+[ 2023-04-10 13:48:17,778 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 13:48:17] "[32mGET /swagger HTTP/1.1[0m" 308 -
+[ 2023-04-10 13:48:17,789 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 13:48:17] "GET /swagger/ HTTP/1.1" 200 -
+[ 2023-04-10 13:48:17,861 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 13:48:17] "GET /swagger/index.css HTTP/1.1" 200 -
+[ 2023-04-10 13:48:17,863 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 13:48:17] "GET /swagger/swagger-ui.css HTTP/1.1" 200 -
+[ 2023-04-10 13:48:17,866 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 13:48:17] "GET /swagger/swagger-ui-bundle.js HTTP/1.1" 200 -
+[ 2023-04-10 13:48:17,868 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 13:48:17] "GET /swagger/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+[ 2023-04-10 13:48:18,155 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 13:48:18] "GET /swagger.json HTTP/1.1" 200 -
+[ 2023-04-10 13:48:18,199 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 13:48:18] "GET /swagger/favicon-32x32.png HTTP/1.1" 200 -
+[ 2023-04-10 14:07:38,615 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:07:38] "GET /swagger/ HTTP/1.1" 200 -
+[ 2023-04-10 14:07:38,672 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:07:38] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:07:38,674 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:07:38] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:07:38,676 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:07:38] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:07:38,676 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:07:38] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:07:39,000 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:07:39] "GET /swagger.json HTTP/1.1" 200 -
+[ 2023-04-10 14:07:39,001 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:07:39] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:10:31,234 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:10:31] "GET /swagger/ HTTP/1.1" 200 -
+[ 2023-04-10 14:10:31,278 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:10:31] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:10:31,280 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:10:31] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:10:31,282 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:10:31] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:10:31,283 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:10:31] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:10:31,603 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:10:31] "GET /swagger.json HTTP/1.1" 200 -
+[ 2023-04-10 14:10:31,605 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:10:31] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:10:44,896 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:10:44] "GET /swagger/ HTTP/1.1" 200 -
+[ 2023-04-10 14:10:44,925 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:10:44] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:10:44,925 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:10:44] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:10:44,926 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:10:44] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:10:44,927 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:10:44] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[ 2023-04-10 14:10:45,081 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:10:45] "GET /swagger.json HTTP/1.1" 200 -
+[ 2023-04-10 14:10:45,084 ] 224 werkzeug - INFO - 127.0.0.1 - - [10/Apr/2023 14:10:45] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
