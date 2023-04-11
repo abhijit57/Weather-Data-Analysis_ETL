@@ -18,7 +18,7 @@
     "paths": {
       "/weather": {
         "get": {
-          "summary": "Returns records from the weather data table based on user query (start date, end date and station id) parameters.",
+          "summary": "Returns records from the weather data table based on user query (start date, end date and station id) parameters. If the min and max temperature have values -999.9, then they are considered missing values. If the precipitation_amt has value as -99.99, then it's considered as missing too.",
           "produces": [
             "application/json"
           ],
