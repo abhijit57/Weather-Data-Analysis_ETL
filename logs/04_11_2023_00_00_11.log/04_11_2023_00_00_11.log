@@ -1,0 +1,2 @@
+[ 2023-04-11 00:00:11,139 ] 50 root - INFO - Postgres Database connection and cursor objects initialized
+[ 2023-04-11 00:00:11,142 ] 78 root - INFO - Table created: weather_data

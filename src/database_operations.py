@@ -147,7 +147,8 @@ class DBOperations:
             fetch_query = f'''
                         SELECT * FROM {table_name};
                         '''
-            results = self.cursor.execute(fetch_query).fetchall()
+            self.cursor.execute(fetch_query)
+            results = self.cursor.fetchall()
             logging.info(f"Fetch finished: {len(results)} records from {table_name}")
 
             return results

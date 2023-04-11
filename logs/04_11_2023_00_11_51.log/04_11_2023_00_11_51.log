@@ -1,0 +1,4 @@
+[ 2023-04-11 00:11:51,809 ] 50 root - INFO - Postgres Database connection and cursor objects initialized
+[ 2023-04-11 00:11:51,810 ] 43 root - INFO - weather data and crop data path variables created
+[ 2023-04-11 00:11:55,272 ] 73 root - INFO - weather dataframe created and ready for ingestion into Postgres Table
+[ 2023-04-11 00:18:26,509 ] 230 root - INFO - Ingestion process started at 2023-04-11 00:11:51.810545 and finished at 2023-04-11 00:18:26.508124, and a total number of 1729957 records were ingested.

@@ -1,203 +1,158 @@
 # Corteva Code Challenge Template -> Weather Analysis and ETL
 ### Author: Abhijit Nayak
 ### Email: nabhijit787@gmail.com
-# Swagger Endpoint -> http://127.0.0.1:5000/swagger/
+
+# Python Environment Setup
+Create a conda environment -> conda create -n virtualenv python=3.8 and then install the requirements.txt file using pip install -r requirements.txt command.
 
 
 # Project Description
 Analysis of weather data records from 1985-01-01 to 2014-12-31 for weather stations in Nebraska, Iowa, Illinois, Indiana, or Ohio.
 
 ## The main components of this project are:
-1. ### main.py
+1. ### src folder containing python modules -> data_preparation, database_operations, utils
 2. ### data_model.py
-3. ### src folder containing python modules -> data_preparation, database_operations, utils
+3. ### main.py
 4. ### swagger.json
 5. ### AWS services that can be used for deployment of this project
 
-# Before proceeding ahead with detailed explanation of the project components, let's talk about the inital setup required in pgAdmin 4 (Open-Source Administration and Development Platform for PostgreSQL).
+#### Before proceeding ahead with detailed explanation of the project components, let's talk about the inital setup required in pgAdmin 4 (Open-Source Administration and Development Platform for PostgreSQL).
     Setup the PostGres server as shown in the images below in the pgAdmin 4 tool. Provide the details: {server name: "CropETL", comments: "Corteva CropETL Assessment", hostname: "localhost", Port: 5432, Username: "postgres", password}
     ![Setting PostGres Server](./answers/PostGres_Server1.JPG)
     ![Setting PostGres Server](./answers/PostGres_Server2.JPG)
 
     Then create a database in this server by the following way:
     ![Setting PostGres DB](./answers/PostGresDB.JPG)
+    After db is created in the pgadmin 4, create a config.ini file and set it as shown below:
+                     [db_params]
+                     hostname = localhost
+                     port = 5432
+                     dbname = Crop_Weather_ETL
+                     username = postgres
+                     password = XXXXXXXX
 
-<!-- # main.py - ETL
-    main.py runs the ETL part of the process 
-* ### Data Extraction- extract.py:
-    1. This part extracts the data we need from https://github.com/corteva/code-challenge-template/tree/main/wx_data and saves it into our local file directory as .txt files
+# src folder containing python modules -> data_preparation, database_operations, utils
+    data_preparation.py and db_operations.py runs the ETL part of the process.
+    utils.py reads db parameters from config.ini and is used while creating a conn object for postgre db.
+* ### Data Extraction- data_preparation.py:
+    PrepareData class has parameterized constructor which takes the folder path "cwd" of the data stored: 'folder path which contains wx_data and yld_data'. It also has weather_data_path which is created by joining the "cwd" parameter with wx_data(folder name) and a crop_data_path created similarly. These dataframes will be used in the methods of DBOperations class (database_operations python module) to ingest the data into respective postgres sql tables.
+    weather_df {output of prep_data.prepare_weather_data().head()} and crop_df {prep_data.prepare_crop_data().head()} are:
+            ![data_preparation output](./answers/PostGresDB.JPG)
 
-   2.  
-        * **get_data()** - calls the URL to extract the text from the page
-        * **parse_html()** - takes in the HTML text and collects all the file names necessary to be processed and gives us a collection of file names we can use to capture the text in the files.
-        * **get_data_save()** - this function utilizes the collection created by previous function make requests to get the data from https://raw.githubusercontent.com/ repo, utilizes pandas to save the data into a csv file in the folder path.
-        * Once we run the data extraction we should have all the files in our folder path under raw_files
+* ### Data Transformation and Loading- database_operations.py:
+    DBOperations class has a parameterized constructor which contains postgres connection and cursor. It reads the db_params dictionary object from utils python module.
+        * **create_weather_data_table()** - creates 'weather_data' table
+        * **create_crop_yield_table()** - creates 'crop_yield_data' table
+        * **create_weather_data_transformed_table()** - creates 'weather_data_transformed' table
+        ![tables](./answers/postgres_sql_tables.JPG)
+        * **fetch_data_table()** - takes in table name as a parameter and fetches all the data from that table.
+        * **insert_data_into_table()** - takes a class_instance as one parameter which would be the instantiated PrepareData class and the other parameter is the table name. It then inserts data from the dataframe created from the PrepareData class and it's methods to the specific table defined as per the table_name parameter. It also has a check to prevent duplicate insertion in the table when the insert query is run again after it has already been ran once.
+
+        In this method itself, there is a transformation operation being undergone on the raw data fetched from weather_data table. Some statistical computations are performed like average min and max temperature in celsius, total precipitation amount in centimeters where missing values {If the min and max temperature have values -999.9, then they are considered missing values. If the precipitation_amt has value as -99.99, then it's considered as missing too.} are ignored during statistical computations. Then these transformed data is inserted into weather_data_transformed  table.
+        ![data_insertion output](./answers/Postgres_weather_data_table_records.JPG)
+        ![data_insertion output](./answers/Postgres_crop_yield_data_table_records.JPG)
+        ![data_insertion output](./answers/Postgres_weather_data_transformed_table_records.JPG)
         
-        
-              raw_files extracted from github repository
-    ![Getting Started](./images/raw_files.png)
+* ### utils.py:
+    This python module contains code to read db parameters from the config file into db_params a dictionary object and has code for custom logging as well as custom exception.
 
-* ### Data Transformation and analysis - transform.py:
+    Logging Output:
+    [ 2023-04-10 00:54:06,463 ] 8 root - INFO - weather data and crop data path variables created
+    [ 2023-04-10 00:54:09,491 ] 29 root - INFO - weather dataframe created and ready for ingestion into Postgres Table
+    [ 2023-04-10 00:54:09,554 ] 41 root - INFO - crop dataframe created and ready for ingestion into Postgres Table
+    [ 2023-04-10 00:56:04,516 ] 8 root - INFO - weather data and crop data path variables created
+    [ 2023-04-10 00:56:07,722 ] 29 root - INFO - weather dataframe created and ready for ingestion into Postgres Table
+    [ 2023-04-10 00:56:07,789 ] 41 root - INFO - crop dataframe created and ready for ingestion into Postgres Table
+    [ 2023-04-10 00:57:56,222 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+    [ 2023-04-10 00:57:56,231 ] 36 root - INFO - Table created: weather_data
+    [ 2023-04-10 00:57:56,257 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+    [ 2023-04-10 00:57:56,261 ] 54 root - INFO - Table created: crop_yield_data
+    [ 2023-04-10 00:58:02,356 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+    [ 2023-04-10 00:58:02,365 ] 94 root - INFO - Ingestion process started at 2023-04-10 00:58:02.356827 and finished at 2023-04-10 00:58:02.365821, and a total number of 30 records were ingested.
+    [ 2023-04-10 00:58:02,392 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+    [ 2023-04-10 01:04:08,847 ] 94 root - INFO - Ingestion process started at 2023-04-10 00:58:02.393830 and finished at 2023-04-10 01:04:08.847021, and a total number of 1729957 records were ingested.
+    [ 2023-04-10 01:07:47,100 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+    [ 2023-04-10 01:46:46,004 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+    [ 2023-04-10 01:58:32,275 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+    [ 2023-04-10 01:59:45,059 ] 75 root - INFO - Table created: weather_data_transformed
+    [ 2023-04-10 01:59:59,474 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+    [ 2023-04-10 02:00:04,950 ] 15 root - INFO - Data Transformation process started at 2023-04-10 02:00:04.557299 and finished at 2023-04-10 02:00:04.950298, and a total number of 4820                      transformed records were ingested into a new table: weather_data.
+    [ 2023-04-10 02:00:24,424 ] 15 root - INFO - Data Transformation process started at 2023-04-10 02:00:24.070853 and finished at 2023-04-10 02:00:24.424752, and a total number of 4820                      transformed records were ingested into a new table: weather_data.
+    [ 2023-04-10 02:00:31,215 ] 14 root - INFO - Postgres Database connection and cursor objects initialized
+    [ 2023-04-10 02:01:00,339 ] 114 root - INFO - Ingestion process started at 2023-04-10 02:00:58.360425 and finished at 2023-04-10 02:01:00.339757, and a total number of 4820 records were ingested.
 
-    1. This part is done using Apache Spark engine. We utilize the .txt files created, instatiate a Sparksession to create a spark dataframe
-    *     raw_files read into a spark dataframe
-    ![Getting Started](./images/csv_show.png)
+    Sample CustomException:
+    ![Custom Exception](./answers/custom_exception.JPG)
 
-    2. The txt-file based data frame (with raw data) is cleansed and transformed with applying approriate data types replacing missing vales with NULLS and creating a key that will act as a unique identifier.
-    *     w_key: A combination of date and region
-    *     raw data after cleansing
-    ![Getting Started](./images/transform_show.png)
-    *     schema
-    ![Getting Started](./images/schema.png)
+# data_model.py
+    This python module executes the class methods defined in data_preparation and database_operations python module.
 
-    3. The cleansed data set is used for performing calculations and aggregations.
-    *     aggregated data by year and region
-    ![Getting Started](./images/agg.png)
+  * **Create weather_data Table:** 
+    python .\data_model.py --create_weather_data_tbl "1"
 
-    4. We sink the two datasets back into a different folder as .csv files, which is used to insert into a database and expose the data via an API.
-    
-    ![Getting Started](./images/enriched.png)
+  * **Create crop_yield_data Table:** 
+    python .\data_model.py --create_crop_yield_tbl  "1" 
 
-    5. The SQL for the questions asked below are part of function **aggregated_dataset()**
+  * **Create weather_data_transformed Table:** 
+    python .\data_model.py --create_weather_data_transformed_tbl  "1"
 
-           a. Average maximum temperature by year and station (in degrees Celsius)
-           b. Average minimum temperature by year and station (in degrees Celsius)
-           c. Total accumulated precipitation by year and station (in centimeters)
-            
+  * **Insert Data into weather_data Table:** 
+    python .\data_model.py --insert_data_tbl  "1" --dir 'C:\Users\abhij\OneDrive - Indiana University\Interview Coding Tests\Corteva_Data Engineering\Weather-Data-Analysis_ETL' --tbl_name weather_data
 
-* ### Databse - SQLite - database_read_write.py: 
+  * **Insert Data into crop_yield_data Table:** 
+    python .\data_model.py --insert_data_tbl  "1" --dir 'C:\Users\abhij\OneDrive - Indiana University\Interview Coding Tests\Corteva_Data Engineering\Weather-Data-Analysis_ETL' --tbl_name crop_yield_data
 
-    1.  **SQLite** database is used as it's easy to spin it up, lightweight and works seamless with native python.
+  * **Insert Data into weather_data_transformed Table:** 
+    python .\data_model.py --insert_data_tbl "1" --tbl_name 'weather_data_transformed' --src_tbl_name 'weather_data'
 
-    2. We have a **DbWrite** class that spins up a database in SQLite and different methods in the DbWrite class perform DDL, DML, DCL operations.
-    ![Getting Started](./images/db.png)
 
-    3. We have two (**create_aggregate_table()** and **create_transformed_table()**) methods that create the tables one for the transformed data one for the the calculated data.
+# main.py
+    This python module creates flask RESTful API endpoints with GET methods for http://127.0.0.1:5000/api/weather and http://127.0.0.1:5000/api/weather/stats  
+    To run this, use command "python main.py"
+    The first api endpoint: /api/weather returns all the records fetched from weather_data table based on the input query - params
+      {
+        start_date: "1994-05-01"
+        end_date: "1998-04-01"
+        station_id: "USC00110072"
+        page_size: 3
+        page_number: 1
+      }
+    ![/api/weather output](./answers/api_weather_jsonOut.JPG)
 
-    4. The two tables are created under the database (**WeatherData.db**) that was spin up while instatiating the DbWrite class.
-     ![Getting Started](./images/tb.png)
+    The second api endpoint: /api/weather/stats returns all the records fetched from from weather_data table based on the input query - params (shown above) and returns transformed records based on statistical computations -> average max and min temperature and total precipitation amount.
+    ![/api/weather/stats output](./answers/api_weather_stats_jsonOut.JPG)
 
-    ### Table Design: 
+# swagger.json
+    Swagger.json is a file that contains a machine-readable description of the RESTful web API. It is used for documenting, visualizing, and testing the API. The Swagger.json file specifies the API's endpoints, their parameters, and their responses. It can be used by various tools, such as Swagger UI or Postman, to generate documentation and a client SDK for the API. By providing a standardized way of describing APIs, Swagger.json helps developers and users understand how to interact with the API and facilitates the development of API-driven applications.
 
-    1. There are two tables that hold the data at two different grain levels
-        * **weather_transformed**: The data is similar to the raw data (.txt) where it has the lowest grain level i.e weather recorded per day and other respective attributes. Additional attributes like **w_key**, **file_name** are used for unique constraint, if we run the same operation twice it will throw an error and not create duplication within the table.
-        * **weather_aggregate**: This table answers the following 3 questions grouped by year and weather station region. Hence the grain level of this data is different to the **weather_transformed** table.
-        **aggregated_dataset()** function in **transform.py** contains the logic that populates the table **weather_aggregate**.
-            * Average maximum temperature by year and station (in degrees Celsius)
-           *  Average minimum temperature by year and station (in degrees Celsius)
-            * Total accumulated precipitation by year and station (in centimeters)
-    2. Further non-clustered indexing can be done on **station code/region** if we determine any use case for joins between the two tables.
-    3. A non-clustered index can be designed on columns like **temperature_recorded_date**,**region**,**avg_year** from both the tables as they are used in query parameters in API, This will help seek the results quicker as the volume of data increases.
-    4. For any **NULL** value in maximum temperature, minimum temperature or precipitation recorded for a particular date, we identify it as 0 to calculate the average.
-        
-           Data from table weather_transformed
-        ![Getting Started](./images/wt_db.png)
-                    
-           Data from table weather_aggregate
-        ![Getting Started](./images/wa_db.png)
+    Swagger UI configurations and blueprint are defined in the main.py module.
 
-    4. The data in these tables is used to expose it via. an API
-    
-# app.py - REST API
-  
-  * Flask API will run on: http://127.0.0.1:5000/
+#### Swagger Endpoint -> http://127.0.0.1:5000/swagger/
 
-  * Flask documentation: https://flask.palletsprojects.com/en/2.2.x/
+    Swagger Screenshots:
+    ![Swagger 1](./answers/Swagger1.JPG)
+    ![Swagger 2](./answers/Swagger2.JPG)
+    ![Swagger 3](./answers/Swagger3.JPG)
+    ![Swagger 4](./answers/Swagger4.JPG)
+    ![Swagger 5](./answers/Swagger5.JPG)
 
-  
-  * There are 6 GET methods designed to fetch data from the database based on query parameters, currently designed to run only on the host we run the flask app.
-    1. **api_get_weather_form_data(lower,upper)** 
-         
-         a. This function retrieves data from the database table **weather_transformed** which contains the raw cleansed data based on lower page bound and upper page bound. 
-         
-         b. The query used to fetch the data comes from the function **get_transformed_data(lower, upper)**.
-
-         c. This function will only retrieve <= 100 rows based on upper and lower limit including to support pagination of the GET method. This will also help with the performance of the API to fetch results quickly.
-
-         d. URL: http://127.0.0.1:5000/api/weather/1/100 , 1 and 100 represent the upper and lower bound results per page, these numbers can be changed in intervals of 100. Note: if the interval is set > 100 the query still shows 100  results.
-
-         ![Getting Started](./images/weather_api.png)
-
-    2. **api_get_weather_agg_data(lower,upper)** 
-         
-         a. This function retrieves data from the database table **weather_aggregate** which contains the calculated data based on lower page bound and upper page bound. 
-         
-         b. The query used to fetch the data comes from the function **get_aggregate_data(lower, upper)**.
-
-         c. This function will only retrieve <= 100 rows based on upper and lower limit including to support pagination of the GET method. This will also help with the performance of the API to fetch results quickly.
-
-         d. URL: http://127.0.0.1:5000/api/weather/stats/1/100 , 1 and 100 represent the upper and lower bound results per page, these numbers can be changed in intervals of 100. Note: if the interval is set > 100 the query still shows 100  results.
-
-        ![Getting Started](./images/wa-api.png)
-
-    3. **api_get_transf_count()** 
-         
-         a. This function retrieves the toal data count from the database table **weather_transformed** which contains the calculated data, This can help with how many times you may to make a call to the API to fetch all the results. 
-         
-         b. The query used to fetch the data comes from the function **get_count_transf()**.
-
-         c. This function will only retrieve 1 row - that is the count from the table in the database. 
-
-         d. URL: http://127.0.0.1:5000/api/weather/transf/count 
-
-         ![Getting Started](./images/t_count.png)
-
-    4. **api_get_aggr_count()** 
-         
-         a. This function retrieves the toal data count from the database table **weather_aggregate** which contains the calculated data, This can help with how many times you may to make a call to the API to fetch all the results. 
-         
-         b. The query used to fetch the data comes from the function **data = db.get_count_agg()**.
-
-         c. This function will only retrieve 1 row - that is the count from the table in the database. 
-
-         d. URL: http://127.0.0.1:5000/api/weather/agg/count
-
-         ![Getting Started](./images/a_count.png)
-
-    5. **api_get_weather_form_data_yr_reg(region,temperature_recorded_date)** 
-         
-         a. This function retrieves data from the database table **weather_transformed** which contains the raw cleansed data based the temperature recorded date and station/region. 
-         
-         b. The query used to fetch the data comes from the function **get_transformed_data_by_region_date(region,temperature_recorded_date)**.
-
-         c. This function will only retrieve 1 row - all attributes from the day the temperature has been recorded and station/region.
-
-         d. URL:  http://127.0.0.1:5000/api/weather/filter/USC00336196/1985-04-10 ,**USC00336196** represents the station/region parameter and **1985-04-10** represents the day temperature has been recorded.
-
-         ![Getting Started](./images/ff.png)
-    
-    5. **api_get_weather_agg_data_yr_reg(avg_year,region)** 
-         
-         a. This function retrieves data from the database table **weather_transformed** which contains the raw cleansed data based the temperature recorded date and station/region. 
-         
-         b. The query used to fetch the data comes from the function **get_aggregate_data_by_region_year(avg_year,region)**.
-
-         c. This function will only retrieve 1 row - all attributes from the day the temperature has been recorded and station/region.
-
-         d. URL:  http://127.0.0.1:5000/api/weather/stats/filter/1995/USC00132977 ,**USC00132977** represents the station/region parameter and **1995** represents the year the averages of temperature and the total precipitation are calculated.
-
-         ![Getting Started](./images/af.png)
-
-    ### The api can be run from CLI using the below command or executing the **app.py** file 
-        flask --app app run
 
 
 # AWS services that can be used for deployment of this project
 
-* **Amazon EC2**: EC2 is a web service that provides resizable compute capacity in the cloud. EC2 can be used to create a virtual machine to run Flask, the database, and the data ingestion code.
+* **Amazon EC2**: EC2 is a web service that provides resizable compute capacity in the cloud. EC2 can be used to create a virtual machine to run Flask app, the database operations, data preparation and other modules. Once all the required setup is done and the application is deployed, the web app can be accessed by appending port number such as 8080 to the IPv4 public ip address in the web browser.
 
-* **Amazon RDS**: Amazon RDS is a managed relational database service that provides an easy-to-set-up, operate, and scale database in the cloud. Amazon RDS can be used to deploy a database that can fetch data to publish in the API and connect with Flask.
 
-* **Amazon S3**: Amazon S3 is an object storage service that can be used to store large amounts of data in the cloud.  Amazon S3 can store files and data that are accessed by the data ingestion code.
+* **AWS Lambda**: AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. AWS Lambda can be used to schedule the data ingestion code written in Python to run at specific times.
 
-* **Amazon API Gateway**: Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. Hence, Amazon API Gateway can be used  to deploy the API.
 
-* **AWS Lambda**: AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. AWS Lambda can be used to schedule the data ingestion code written in Python and Apache Spark to run at specific times.
-
-* **Apache Spark on Amazon EMR**: Amazon EMR is a managed cluster platform that simplifies running big data frameworks, such as Apache Spark and Apache Hadoop, on AWS. Amazon EMR can be used to deploy Apache Spark and run the data ingestion code.
-
-* **AWS Identity and Access Management (IAM)**: AWS IAM is a web service that helps you securely control access to AWS resources. AWS IAM can be used to create and manage AWS users and groups, and to control access to the API, database, and data ingestion code.
+* **AWS CodePipeline and Elastic Beanstalk**: A web app can be created in the AWS Elastic Beanstalk. Then, the whole project once pushed to a Github repository can be linked to the CodePipeline which would then link with Elastic Beanstalk as deployment provider and the environment created by the web app by beanstalk itself. So, after the github repo is linked with code pipeline which is then linked to elastic beanstalk web app. Then, a continuous delivery pipeline would be created with an URL available. That URL can be triggered in the web-app to access the web app. 
+Moreover, github actions can be integrated into the project pushed into the repo which would then run based on the actions yaml file and act as a Continuous Inegration pipeline. 
+So, if any code changes were done and pushed to the repo, github actions (CI) would be triggered and then the AWS CodeDeploy & Elastic Beanstlak would be triggered too as part of (CD). This is how we can incorporate CI/CD practices into this project.
 
 
 
-    -->
+
+
+
+   

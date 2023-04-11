@@ -1,0 +1,4 @@
+[ 2023-04-11 00:27:44,348 ] 50 root - INFO - Postgres Database connection and cursor objects initialized
+[ 2023-04-11 00:27:47,078 ] 152 root - INFO - Fetch finished: 1729957 records from weather_data
+[ 2023-04-11 00:27:47,855 ] 202 root - INFO - Data Transformation process started at 2023-04-11 00:27:47.276871 and finished at 2023-04-11 00:27:47.855431, and a total number of 4820                                 records were transformed.
+[ 2023-04-11 00:27:49,640 ] 231 root - INFO - Ingestion process started at 2023-04-11 00:27:47.276871 and finished at 2023-04-11 00:27:49.639932, and a total number of 0 records were ingested.

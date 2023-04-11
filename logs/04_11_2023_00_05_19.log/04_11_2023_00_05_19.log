@@ -1,0 +1,3 @@
+[ 2023-04-11 00:05:19,987 ] 50 root - INFO - Postgres Database connection and cursor objects initialized
+[ 2023-04-11 00:05:19,989 ] 43 root - INFO - weather data and crop data path variables created
+[ 2023-04-11 00:05:23,414 ] 73 root - INFO - weather dataframe created and ready for ingestion into Postgres Table
