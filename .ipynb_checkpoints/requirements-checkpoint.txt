@@ -1,0 +1,7 @@
+Flask==2.2.3
+Flask_RESTful==0.3.9
+flask_swagger==0.2.14
+flask_swagger_ui==4.11.1
+numpy==1.24.2
+pandas==1.4.2
+psycopg2==2.9.6
