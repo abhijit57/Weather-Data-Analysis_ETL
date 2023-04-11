@@ -17,10 +17,11 @@ Analysis of weather data records from 1985-01-01 to 2014-12-31 for weather stati
 5. ### AWS services that can be used for deployment of this project
 
 #### Before proceeding ahead with detailed explanation of the project components, let's talk about the inital setup required in pgAdmin 4 (Open-Source Administration and Development Platform for PostgreSQL).
-    Setup the PostGres server as shown in the images below in the pgAdmin 4 tool. Provide the details: {server name: "CropETL", comments: "Corteva CropETL Assessment", hostname: "localhost", Port: 5432, Username: "postgres", password}
+
+Setup the PostGres server as shown in the images below in the pgAdmin 4 tool. Provide the details: {server name: "CropETL", comments: "Corteva CropETL Assessment", hostname: "localhost", Port: 5432, Username: "postgres", password}
     
-    ![Setting PostGres Server](./answers/PostGres_Server1.JPG)
-    ![Setting PostGres Server](./answers/PostGres_Server2.JPG)
+  ![Setting PostGres Server](./answers/PostGres_Server1.JPG)
+  ![Setting PostGres Server](./answers/PostGres_Server2.JPG)
 
     Then create a database in this server by the following way:
     ![Setting PostGres DB](./answers/PostGresDB.JPG)
